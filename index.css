@@ -17,7 +17,7 @@ body {
   .container {
     text-align: center;
     color: white;
-    margin-right:110px;
+    margin-right:80px;
     margin-top:140px;
 
   }
@@ -63,6 +63,13 @@ body {
     width: 100%; /* Sử dụng chiều rộng toàn bộ của phần tử cha */
     text-align: center; /* Căn giữa nội dung */
     font-family: 'Baloo Bhaina', cursive;
+    color: palevioletred; 
+    font-size: 170px;
+  }
+  #btn{
+   margin-right: 10px;
+   margin-bottom: 60px !important;
+   margin-top : -50px
   }
   
   /* Style cho các loại pháo giấy */
