@@ -41,13 +41,14 @@ body {
     margin: 10px;
     cursor: pointer;
     background-color:#FC909F;
-  
+    font-family: 'Baloo Bhaina', cursive;
     color: white;
     border: none;
     border-radius: 5px;
   }
   #resetBtn{
     background-color:#FC909F;
+    font-family: 'Baloo Bhaina', cursive;
   }
 
   
