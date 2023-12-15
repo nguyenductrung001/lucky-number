@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    border: 2px solid black;
+    padding: 25px;
+    background: url("image3.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+  }
+  
+  .container {
+    text-align: center;
+    color: white;
+    margin-right:110px;
+    margin-top:140px;
+
+  }
+  
+  h1 {
+    font-size: 48px;
+  }
+  
+  #resetBtn {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  #generateBtn{
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    background-color:#FC909F;
+    
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  #resetBtn{
+    background-color:#FC909F;
+  }
+
+  
+  /* #generateBtn:hover, */
+  /* #resetBtn:hover {
+    background-color: #2980b9;
+  } */
+  /* index.css */
+
+#randomNumber {
+    display: inline-block; /* Hiển thị phần tử là một block element */
+    width: 100%; /* Sử dụng chiều rộng toàn bộ của phần tử cha */
+    text-align: center; /* Căn giữa nội dung */
+    font-family: 'Baloo Bhaina', cursive;
+  }
+  
+  /* Style cho các loại pháo giấy */
+.confetti {
+  width: 10px;
+  height: 10px;
+  background-color: #f00; /* Màu của pháo giấy */
+  position: absolute;
+  animation: confetti-fall 3s ease-out; /* Hiệu ứng rơi xuống */
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg); /* Ban đầu ẩn pháo giấy trên màn hình */
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg); /* Rơi xuống và xoay */
+  }
+}
+   /* Pháo giấy */
+   .confetti {
+    width: 10px;
+    height: 10px;
+    background-color: #f00;
+    /* Màu của pháo giấy */
+    position: absolute;
+    animation: confetti-fall 3s ease-out;
+    /* Hiệu ứng rơi xuống */
+}
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+        /* Ban đầu ẩn pháo giấy bên trên màn hình */
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        /* Rơi xuống và xoay */
+    }
+}
+
+/* Responsive CSS */
+@media only screen and (max-width: 768px) {
+    /* Điều chỉnh CSS tại đây để phù hợp với kích thước màn hình nhỏ hơn 768px */
+    .container {
+        padding-top: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    #randomNumber {
+        font-size: 120px;
+    }
+
+    #btn button {
+        font-size: 20px;
+    }
+}
+  
