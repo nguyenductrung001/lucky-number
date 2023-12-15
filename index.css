@@ -27,7 +27,7 @@ body {
   
   #resetBtn {
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 30px;
     margin: 10px;
     cursor: pointer;
     background-color: #3498db;
@@ -37,11 +37,11 @@ body {
   }
   #generateBtn{
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 30px;
     margin: 10px;
     cursor: pointer;
     background-color:#FC909F;
-    
+  
     color: white;
     border: none;
     border-radius: 5px;
