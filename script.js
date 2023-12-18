@@ -1,7 +1,12 @@
-const audio = document.getElementById('playAudio');
 const randomNumberElement = document.getElementById('randomNumber');
 const generateButton = document.getElementById('generateBtn');
 const resetButton = document.getElementById('resetBtn');
+document.addEventListener('DOMContentLoaded', (event) => {
+  const audio = document.getElementById('playAudio');
+  audio.play(); // Bắt đầu phát audio khi trang được tải
+
+  // Các đoạn code khác của bạn ở đây
+});
 
 const displayDefaultNumber = () => {
   const defaultNumber = '000';
