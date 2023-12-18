@@ -1,7 +1,7 @@
+const audio = document.getElementById('audio');
 const randomNumberElement = document.getElementById('randomNumber');
 const generateButton = document.getElementById('generateBtn');
 const resetButton = document.getElementById('resetBtn');
-const audio = document.getElementById('audio');
 
 const displayDefaultNumber = () => {
   const defaultNumber = '000';
@@ -58,5 +58,5 @@ const createConfetti = () => {
 
   setTimeout(() => {
     confetti.remove(); // Xoá pháo giấy sau khi rơi xuống
-  }, 3000); // Thời gian rơi của từng pháo giấy
+  }, 2000); // Thời gian rơi của từng pháo giấy
 };
