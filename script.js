@@ -1,4 +1,4 @@
-const audio = document.getElementById('audio');
+const audio = document.getElementById('playAudio');
 const randomNumberElement = document.getElementById('randomNumber');
 const generateButton = document.getElementById('generateBtn');
 const resetButton = document.getElementById('resetBtn');
