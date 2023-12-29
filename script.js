@@ -27,7 +27,7 @@ const generateRandomNumber = () => {
       clearInterval(interval);
       setTimeout(() => {
         generateButton.disabled = false;
-        showConfetti(); // Hiển thị hiệu ứng pháo giấy sau khi có kết quả
+        // showConfetti(); // Hiển thị hiệu ứng pháo giấy sau khi có kết quả
       }, 100);
     }
   }, 50);
@@ -42,26 +42,39 @@ resetButton.addEventListener('click', () => {
 // Hiển thị hiệu ứng pháo giấy
 const showConfetti = () => {
   for (let i = 0; i < 100; i++) {
-    createConfetti();
+    createGoldCoin();
   }
 };
 
 // Tạo pháo giấy ngẫu nhiên
-const createConfetti = () => {
-  const confetti = document.createElement('div');
-  const colors = ['#f00', '#0f0', '#00f', '#ff0', '#f0f']; // Màu sắc khác nhau
-  const size = Math.floor(Math.random() * 20) + 5;
+// Function để tạo hiệu ứng rơi đồng tiền vàng liên tục
+const continuousGoldCoins = () => {
+  // Sử dụng setInterval để gọi hàm createGoldCoin() liên tục sau mỗi khoảng thời gian
+  setInterval(createGoldCoin, 100); // Thay đổi 500 thành khoảng thời gian mong muốn giữa mỗi đồng tiền rơi
+};
 
-  confetti.classList.add('confetti');
-  confetti.style.left = `${Math.random() * window.innerWidth}px`;
-  confetti.style.top = `${Math.random() * window.innerHeight}px`;
-  confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-  confetti.style.width = `${size}px`;
-  confetti.style.height = `${size}px`;
+// Hiển thị hiệu ứng rơi đồng tiền vàng khi trang được tải
+document.addEventListener('DOMContentLoaded', () => {
+  continuousGoldCoins();
+});
 
-  document.body.appendChild(confetti);
+// Tạo pháo giấy ngẫu nhiên (đồng tiền vàng trong trường hợp này)
+const createGoldCoin = () => {
+  const goldCoin = document.createElement('div');
+  const size = Math.floor(Math.random() * 120) + 5;
+  const screenWidth = window.innerWidth;
+  const screenHeight = window.innerHeight;
+
+  goldCoin.classList.add('gold-coin');
+  goldCoin.style.left = `${Math.random() * screenWidth}px`;
+  goldCoin.style.top = `${-Math.random() * screenHeight}px`;
+  goldCoin.style.backgroundImage = "url('1.png')";
+  goldCoin.style.width = `${size}px`;
+  goldCoin.style.height = `${size}px`;
+
+  document.body.appendChild(goldCoin);
 
   setTimeout(() => {
-    confetti.remove(); // Xoá pháo giấy sau khi rơi xuống
-  }, 2000); // Thời gian rơi của từng pháo giấy
+    goldCoin.remove();
+  }, 3000);
 };

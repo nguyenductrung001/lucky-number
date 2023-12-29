@@ -8,7 +8,7 @@ body {
     font-family: Arial, sans-serif;
     border: 2px solid black;
     padding: 25px;
-    background: url("image3.jpg");
+    background: url("image4.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     overflow: hidden;
@@ -24,7 +24,7 @@ body {
     max-width: 80%;
     padding: 20px;
     margin-top : 80px;
-    margin-left: -40px;
+    margin-left: -10px;
   }
   
   
@@ -80,44 +80,43 @@ body {
   }
   
   /* Style cho các loại pháo giấy */
-.confetti {
-  width: 10px;
-  height: 10px;
-  background-color: #f00; /* Màu của pháo giấy */
-  position: absolute;
-  animation: confetti-fall 3s ease-out; /* Hiệu ứng rơi xuống */
-}
-
-@keyframes confetti-fall {
-  0% {
-    transform: translateY(-100vh) rotate(0deg); /* Ban đầu ẩn pháo giấy trên màn hình */
+  .gold-coin {
+    width: 550px;
+    height: 550px;
+    position: absolute;
+    animation: confetti-fall-small 3s ease-out; /* Hiệu ứng rơi xuống */
   }
-  100% {
-    transform: translateY(100vh) rotate(360deg); /* Rơi xuống và xoay */
+  
+  @keyframes confetti-fall-small {
+    0% {
+      transform: translateY(-100vh) rotate(0deg); /* Ban đầu ẩn pháo giấy trên màn hình */
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg); /* Rơi xuống và xoay */
+    }
   }
-}
-   /* Pháo giấy */
-   .confetti {
-    width: 10px;
-    height: 10px;
-    background-color: #f00;
+  
+  /* Pháo giấy */
+  .gold-coin-large {
+    width: 150px;
+    height: 150px;
     /* Màu của pháo giấy */
     position: absolute;
-    animation: confetti-fall 3s ease-out;
+    animation: confetti-fall-large 3s ease-out;
     /* Hiệu ứng rơi xuống */
-}
-
-@keyframes confetti-fall {
+  }
+  
+  @keyframes confetti-fall-large {
     0% {
-        transform: translateY(-100vh) rotate(0deg);
-        /* Ban đầu ẩn pháo giấy bên trên màn hình */
+      transform: translateY(-100vh) rotate(0deg);
+      /* Ban đầu ẩn pháo giấy bên trên màn hình */
     }
-
     100% {
-        transform: translateY(100vh) rotate(360deg);
-        /* Rơi xuống và xoay */
+      transform: translateY(100vh) rotate(360deg);
+      /* Rơi xuống và xoay */
     }
-}
+  }
+  
 
 /* Responsive CSS */
 @media only screen and (max-width: 768px) {
@@ -135,4 +134,10 @@ body {
         font-size: 20px;
     }
 }
-  
+.gold-coin {
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none; /* Để không ảnh hưởng đến việc click hoặc hover lên các đồng tiền */
+  /* Các thuộc tính khác như border-radius, shadow, v.v. có thể được thêm vào để tùy chỉnh hình dạng và hiệu ứng của đồng tiền */
+}
